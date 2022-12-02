@@ -1,0 +1,2 @@
+awk -vFPAT='([^,]*)|("[^"]+")' -vOFS=',' '{if($10=="\"VVR1\"") print $2,$6, $7,$10, $12, $13, $14, $15, $16, $17}'  complete.csv > VVR1_clean.csv   // need to be adjusted to VVR2 and VVR3
+awk -vFPAT='([^,]*)|("[^"]+")' -vOFS=',' '{if($10=="\"degrad_pattern_VVR1\"") print $2, $11}' parameters.csv > degrad_pattern.csv
